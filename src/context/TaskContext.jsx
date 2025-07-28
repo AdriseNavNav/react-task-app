@@ -11,7 +11,7 @@ export function TaskContextProvider(props) {
   }, []);
 
   function createTask(title, description) {
-    setTasks([...tasks, { id: tasks.length, title, description }]);
+    setTasks([...tasks, { id: crypto.randomUUID(), title, description }]);
   }
 
   function deleteTask(id) {
